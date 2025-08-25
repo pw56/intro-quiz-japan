@@ -1,6 +1,12 @@
 function generateMusicPrompt(startDate, endDate, numSongs, isSecondTime = false) {
   let prompt =
-`${startDate}から${endDate}の間に以下のサイトで上位100位以内にランクインした楽曲(J-POP, K-POP, 洋楽など)を調査し、ランダムな順で重複がないように${numSongs}曲、日本版の曲名とアーティストを、指定したYAML形式でリストアップしてください。サンプルではなく${numSongs}曲全ての曲を書式化するまで繰り返してください。要件を満たした出力結果になるまで検索・推論を繰り返してください。実行時間はいくらかかっても構いません。
+`${startDate}から${endDate}の間に以下のサイトで上位100位以内にランクインした楽曲(J-POP, K-POP, 洋楽など)を調査し、
+ランダムな順で重複がないように${numSongs}曲、
+日本版の曲名とアーティストを列挙してください。
+それから、列挙したものを指定したYAML形式でフォーマットしてください。
+サンプルではなく${numSongs}曲全ての曲を書式化するまで繰り返してください。
+要件を満たした出力結果になるまで検索・推論を繰り返してください。
+実行時間はいくらかかっても構いません。
 
 ランキング調査に用いるサイト:
 ・Billboard JAPAN Hot 100 (https://www.billboard-japan.com)
@@ -19,7 +25,7 @@ song_3:
 `;
 
   if (isSecondTime) {
-    prompt += `\n前回の処理で出力された楽曲は除外してください。`;
+    prompt += `\nまた、前の処理結果も含めて重複した楽曲は除外して再実行してください。`;
   }
 
   return prompt;
