@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>イントロクイズ用プロンプト生成ツール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>イントロクイズ用プロンプト生成ツール</h1>
+
+    <div class="form-group">
+      <label for="startDate">開始日 (例: 2025年01月01日):</label>
+      <input type="text" id="startDate" placeholder="YYYY年MM月DD日">
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">終了日 (例: 2025年08月25日):</label>
+      <input type="text" id="endDate" placeholder="YYYY年MM月DD日">
+    </div>
+
+    <div class="form-group">
+      <label for="numSongs">出題する曲数:</label>
+      <input type="number" id="numSongs" min="1" placeholder="例: 10">
+    </div>
+
+    <div class="form-group checkbox">
+      <input type="checkbox" id="excludePrevious">
+      <label for="excludePrevious">2回目以降（前回出力された曲を除外）</label>
+    </div>
+
+    <button id="generateBtn">プロンプトを生成</button>
+
+    <div class="output-section">
+      <label for="output">生成されたプロンプト:</label>
+      <textarea id="output" rows="20" readonly></textarea>
+      <button id="copyBtn">コピー</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
