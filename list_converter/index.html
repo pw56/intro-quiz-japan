@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>イントロクイズ曲リスト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>イントロクイズ 曲リスト</h1>
+
+  <textarea id="yamlInput" placeholder="YAML形式の曲リストをここに貼り付けてください"></textarea>
+  <button onclick="parseYAML()">変換</button>
+
+  <div id="songList"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

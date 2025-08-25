@@ -8,14 +8,14 @@ function generateMusicPrompt(startDate, endDate, numSongs, isSecondTime = false)
 
 YAMLのフォーマット:
 song_1:
- - title: title_name
- - artist: artist_name
+ - title: "title_name"
+ - artist: "artist_name"
 song_2:
- - title: title_name
- - artist: artist_name
+ - title: "title_name"
+ - artist: "artist_name"
 song_3:
- - title: title_name
- - artist: artist_name
+ - title: "title_name"
+ - artist: "artist_name"
 `;
 
   if (isSecondTime) {
