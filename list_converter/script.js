@@ -5,10 +5,11 @@ function parseYAML() {
 
   try {
     const data = jsyaml.load(input);
+    let index = 1;
 
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
-        const song = data[key]; // song_1, song_2, etc.
+        const song = data[key];
 
         if (typeof song === "object" && song !== null) {
           const title = song.title || "タイトル不明";
@@ -19,6 +20,15 @@ function parseYAML() {
 
           const songBlock = document.createElement("div");
           songBlock.className = "song-block";
+
+          // 曲番号を表示
+          const indexElem = document.createElement("div");
+          indexElem.className = "song-index";
+          indexElem.textContent = `${index}曲目`;
+
+          // 曲の詳細ブロック
+          const detailsDiv = document.createElement("div");
+          detailsDiv.className = "song-details";
 
           const titleElem = document.createElement("div");
           titleElem.className = "song-title";
@@ -34,11 +44,16 @@ function parseYAML() {
           searchBtn.className = "search-button";
           searchBtn.textContent = "ネットで検索";
 
-          songBlock.appendChild(titleElem);
-          songBlock.appendChild(artistElem);
-          songBlock.appendChild(searchBtn);
+          // 要素を構成
+          detailsDiv.appendChild(titleElem);
+          detailsDiv.appendChild(artistElem);
+          detailsDiv.appendChild(searchBtn);
 
+          songBlock.appendChild(indexElem);
+          songBlock.appendChild(detailsDiv);
           songListDiv.appendChild(songBlock);
+
+          index++;
         }
       }
     }
