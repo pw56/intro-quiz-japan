@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>イントロクイズツール</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .button-link {
+      background-color: #d3d3d3;
+      color: #000;
+      text-decoration: none;
+      padding: 40px 30px;
+      width: 300px;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .button-link:hover {
+      background-color: #1e90ff; /* ドジャーブルー */
+      color: #fff;
+    }
+
+    .button-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .button-description {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="./prompt_generator" class="button-link">
+      <div class="button-title">プロンプト生成器</div>
+      <div class="button-description">
+        AIにイントロクイズのリストのデータを作成してもらうために<br>
+        プロンプトに入力する文章を作成
+      </div>
+    </a>
+    <a href="./list_converter" class="button-link">
+      <div class="button-title">リスト変換</div>
+      <div class="button-description">
+        AIによって生成されたイントロクイズの<br>
+        曲のリストのデータを表示用に変換
+      </div>
+    </a>
+    <a href="./manual.pdf" class="button-link" target="_blank">
+      <div class="button-title">使用方法</div>
+      <div class="button-description">
+        このツールの使用方法が<br>
+        解説されたPDF
+      </div>
+    </a>
+  </div>
+</body>
+</html>
