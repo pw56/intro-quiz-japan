@@ -14,7 +14,7 @@ function parseYAML() {
           const title = song.title || "タイトル不明";
           const artist = song.artist || "アーティスト不明";
 
-          const query = encodeURIComponent(`${title} ${artist} topic`);
+          const query = encodeURIComponent(`${title} ${artist} topic site:www.youtube.com`);
           const searchUrl = `https://www.google.com/search?q=${query}&tbm=vid`;
 
           const songBlock = document.createElement("div");
