@@ -8,9 +8,9 @@ function parseYAML() {
 
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
-        const songArray = data[key];
-        if (Array.isArray(songArray) && songArray.length > 0) {
-          const song = songArray[0]; // 最初の要素を取得
+        const song = data[key]; // song_1, song_2, etc.
+
+        if (typeof song === "object" && song !== null) {
           const title = song.title || "タイトル不明";
           const artist = song.artist || "アーティスト不明";
 
