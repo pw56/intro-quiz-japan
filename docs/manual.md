@@ -1,7 +1,7 @@
 # 使用方法
 
 ## 1. サイトを開く
-> ### ブラウザで[ツールのウェブサイト](https://pw56.github.io/intro-quiz)を開く。
+> ### ブラウザで[ツールのウェブサイト](https://pw56.github.io/intro-quiz-japan)を開く。
 > ![トップページ](photo/top_page.png)
 
 ## 2. 「プロンプト生成」
